@@ -1,12 +1,12 @@
 # Challenge Info:
 
-### Challenge Name: Not_Baby_Fixed
+#### Challenge Name: Not_Baby_Fixed
 
-### Challenge Author: QuickMaffs
+#### Challenge Author: QuickMaffs
 
-### Challenge Description: Hmm.... What is this? (Note: Not_Baby has a different solution than intended)
+#### Challenge Description: Hmm.... What is this? (Note: Not_Baby has a different solution than intended)
 
-### Files Provided: out.txt | nums.txt | script.py
+#### Files Provided: out.txt | nums.txt | script.py
 
 # Quick Solution:
 
