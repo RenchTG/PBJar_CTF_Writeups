@@ -8,7 +8,9 @@
 
 ### Files Provided: out.txt | nums.txt | script.py
 
-## Solution: 
+# Quick Solution:
+
+# In-Depth Solution: 
 
 #### So after looking through the files we have provided we can see that script.py reads in flag.txt and nums.txt and then generates out.txt. Out.txt prints out an n value, e value, and ct value so we know this is RSA. A lot of other solutions that I found for this challenge used factor calculators for a long time or factorDB now that someone uploaded the factors into it. However that's cringe and we like to do the intended solution around here 😎. (Note: I did talk to the challenge author and this method is the intended sol. 
 
