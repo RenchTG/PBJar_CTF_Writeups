@@ -8,7 +8,11 @@
 
 #### Files Provided: out.txt | nums.txt | script.py
 
-# Quick Solution:
+# TLDR:
+#### - Factor a, b, c and use substitution to rewrite the polynomial for n to only have two variables.
+#### - Factor your new polynomial into two smaller factors, plug-in your variables and solve.
+#### - Use a factoring calculator to get all the prime factors of your two smaller n factors.
+#### - Standard RSA now: Calculate phi, then d, then m, and finally get the flag.
 
 # In-Depth Solution: 
 
