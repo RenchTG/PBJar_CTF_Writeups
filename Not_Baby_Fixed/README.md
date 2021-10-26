@@ -9,9 +9,9 @@
 #### Files Provided: out.txt | nums.txt | script.py
 
 # TLDR:
-#### - Factor a, b, c and use substitution to rewrite the polynomial for n to only have two variables.
-#### - Factor your new polynomial into two smaller factors, plug-in your variables and solve.
-#### - Use a factoring calculator to get all the prime factors of your two smaller n factors.
+#### - Factor a, b, c and use substitution to rewrite the equation for n to only have 2 (known) variables rather than 3.
+#### - Factor your new polynomial into 2 smaller factors, plug-in your variables and solve for those 2 factors.
+#### - Use a factoring calculator to get all the prime factors of your two smaller n factors, easier than doing entire big n value.
 #### - Standard RSA now: Calculate phi, then d, then m, and finally get the flag.
 
 # In-Depth Solution: 
