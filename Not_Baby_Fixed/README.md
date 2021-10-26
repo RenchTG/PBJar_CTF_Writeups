@@ -88,4 +88,4 @@ print(flag)
 
 #### Anyways I'm done blabbering now here's the flag that is printed when I run my solve.py script.
 
-### Flag: flag{plz_n0_guess_sum_of_a_b_c_d1vides_n}
+## Flag: flag{plz_n0_guess_sum_of_a_b_c_d1vides_n}
