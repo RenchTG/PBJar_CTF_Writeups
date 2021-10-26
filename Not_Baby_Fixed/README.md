@@ -2,9 +2,9 @@
 
 ## Challenge Author: QuickMaffs
 
-## Challenge Description: Hmm.... What is this? (Note: Not_Baby has a different solution than intended)
+### Challenge Description: Hmm.... What is this? (Note: Not_Baby has a different solution than intended)
 
-## Files Provided: out.txt | nums.txt | script.py
+### Files Provided: out.txt | nums.txt | script.py
 
 ## Solution: 
 
@@ -25,4 +25,4 @@ print(g)
 
 #### Now that we have two smaller numbers that we know are the products of n we can begin to prime factorize them, which will be much faster and more efficient than an incredibly large n value. Using factorDB I was able to get a long list of only prime factors that all multiply to get n. Time to write our script and decrypt this RSA now that the hard part is over. I will post my full script in this folder but I will give a brief explanation of it here. After calculating f and g I create an array of all the prime factors and call it nums. I then calculate phi by multiplying all of the factors - 1 by each other. (Note: Will explain why this won't always work). Then I just calculate d value with standard RSA, so e^-1 mod phi. I think this can also be achieved with the pycrypto inverse function with inverse (e, phi). Then find the message, again with standard RSA protocol, so our cyphertext^d mod n. Then I just run the long_to_bytes function to convert the message from numbers to readable text and voila, we have our flag. Quickly to explain my previous note the phi function isn't calculated simply by getting the product of every prime factor - 1 it is actually calculated wtih phi(p^e) = p^(e-1) * (p-1) p being the prime and e being the exponent. Sometimes though you won't get any primes with an exponent larger than 1 so the beginning part of the phi function which is p^(e-1) will just end up equalling 1, so all you have to really solve for is (p-1). In this problem there was a prime factor of 2^4, but I was too lazy to write an actually good script so when I solved the phi function by hand with 2^4 I found that it would end up multiplying phi by 8, so in my nums array I just lazily added a factor of 9 so that when phi was multiplied by (num - 1) the 9 would multiply phi by 8. If you want a much better way of doing this I'd recommend checking out https://hackmd.io/Dy_A6F9fQTikEtHMEKcZ1Q?view this persons write-up has a much better and more dynamic way to calculate phi that will work with multiple factors with exponents > 1. Also funny enough this was the only write-up I could find that solved the challenge with the intended solutionso kudos to them. However, as a beginner reading that write-up I thought it could use a little more explanationto help people trying to learn which I tried to achieve in this write-up. Anyways I'm done blabbering now here's the flag that is printed when I run my solve.py script.
 
-## Flag: flag{plz_n0_guess_sum_of_a_b_c_d1vides_n}
+### Flag: flag{plz_n0_guess_sum_of_a_b_c_d1vides_n}
