@@ -1,6 +1,8 @@
-# Challenge Name: Not_Baby_Fixed
+# Challenge Info:
 
-## Challenge Author: QuickMaffs
+### Challenge Name: Not_Baby_Fixed
+
+### Challenge Author: QuickMaffs
 
 ### Challenge Description: Hmm.... What is this? (Note: Not_Baby has a different solution than intended)
 
