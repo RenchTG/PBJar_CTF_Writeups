@@ -33,21 +33,21 @@ with open("rockyou.txt", "r") as my_file:
 os.system("steghide extract -sf stegosaurus.jpg -xf info.txt -p " + "\"" + line + "\"")
 ```
 
-#### After searching I found this neat os module, that I think is built into python so no installing is necessary, which allows you to run terminal commands from python. Eventually I was able to craft together that line shown above which will try to extract info from the image, put anything extracted into info.txt, and use the passphrase taken as we loop through rockyou.txt. The weird "\"" on both sides of the variable line are just to make sure that if there are any space in the word list, such as 'I love you', the command will read it in as one string rather than spitting out something like: 
+#### After searching I found this neat module by the name of os, that I'm pretty sure is built into python so no installing is necessary, which allows you to run terminal commands from python. Eventually I was able to craft together that line shown above which will try to extract info from the image, put anything extracted into info.txt, and use the passphrase taken as we loop through rockyou.txt. The weird "\\" on both sides of the variable `line` are just to make sure that if there are any spaces in one of the lines, such as 'I love you', the command will read it in as one string rather than spitting out something like: 
 
 `Unknown argument "you"`
 
-#### After that just let the terminal get spammed with something along the lines of:
+#### After that just let the terminal get spammed a bunch of times with something along the lines of:
 
 `Unable to extract data with that passphrase`
 
-#### Then the nice thing of adding `xf info.txt` into the command alows you to walk away from your computer in case the data extracted was just raw data as you could come back and it would be neatly saved in info.txt. ZeroDayTea set it up however to create a flag.txt file for you anyways so it didn't matter that much, but I think it still makes life much more convenient. 
+#### Finally the nice thing of adding `-xf info.txt` into the command alows you to walk away from your computer in case the data extracted was just raw data as you could come back and it would be neatly saved in info.txt. ZeroDayTea set it up however to create a flag.txt file for you anyways so it didn't matter that much, but I think it still makes life much more convenient. 
 
 #### Anyways enough blabbering here's the flag that was extracted!
 
 ## Flag: flag{ungulatus_better_than_stenops}
 
-# Script: 
+# Full Script: 
 
 ```python
 import os
