@@ -33,7 +33,7 @@ halfway = int(((max_limit - min_limit) / 2) + min_limit)
 print(halfway)
 ```
 
-####  This is the short script that I use to get my middle number. After that I just run it several times replacing the url with the number my program prints and then update min and max limit accordingly. Eventually the version number `133791021` was able to give me the flag file. Then just run strings or cat:
+####  This is the short script that I use to get my middle number. After that I just go the website and replace the version in the url with the number my program prints, check what response I get from the website and update min and max limit accordingly, and just rinse and repeat. Eventually the version number `133791021` downloaded a file called `flag`. Then just run strings or cat on it like this:
 
 #### `strings flag` or `cat flag`
 
@@ -44,11 +44,6 @@ print(halfway)
 # Full Script:
 
 ```python
-#initial limits
-min_limit = 100000000
-max_limit = 1000000000
-
-#final limits
 min_limit = 133791015
 max_limit = 133791027
 
