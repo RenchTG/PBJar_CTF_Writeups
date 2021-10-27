@@ -16,7 +16,7 @@
 
 # In-Depth Solution: 
 
-#### So to start off we go to the website on the link provided and a weird file is downloaded. It has a bunch of non-readable text on it, but some is readable. On it though we can find a link that takes us to download version 2. Once we download version 2 we download another file and in there we get a link to version 3. This will repeat over and over again. Our goal as the description states is to find the newest one. I start off by playing around with the url and I realize that I can change the url to get whatever version number I put in. I then proceed to find the limits of the version by just adding zeroes. Eventually I get the url:
+#### So to start off we go to the website on the link provided and a weird file is downloaded. It has a bunch of non-readable text on it, but some is readable. On it though we can find a link that takes us to download version 2. Once we click the link to version 2 we download another file and in there we get a link to version 3. This will repeat over and over again. Our goal as the description states is to find the newest one. I start off by playing around with the url and I realize that I can change the url to get whatever version number I put in. I then proceed to find the limits of the version by just adding zeroes. Eventually I get the url:
 
 #### `http://147.182.172.217:42100/v100000000`
 
