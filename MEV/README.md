@@ -26,8 +26,8 @@
 
 `26 contract internal transactions`
 
-#### link and was taken to this page: https://etherscan.io/txsInternal?block=12983883. Scrollarooni down to the bottom and wow there. `MEV Bot: 0x4d2...2d3` and `Wrapped Ether` should be exactly what we're looking for. We know this is something to do with MEV as the ether was transferred to an MEV bot and the wrapped ether must of course be the bribe payment. We can also see that both have identical ether values of 0.009672680170055 Ether.
+#### link and was taken to this page: https://etherscan.io/txsInternal?block=12983883. Scrollarooni down to the bottom and wow there cowboy. `MEV Bot: 0x4d2...2d3` and `Wrapped Ether` should be exactly what we're looking for. We know this is something to do with MEV as the ether was transferred to an MEV bot and the wrapped ether must of course be the bribe payment. We can also see that both have identical ether values of 0.009672680170055 Ether.
 
-#### Submit that number and it's the flag. Imo this challenge should have had much more solves as it really only entailed looking at a block's first transaction but whatever. Enjoy your flag!
+#### Submit that number and it's the flag. In my opinion this challenge should have had much more solves as it really only entailed looking at a block's first transaction but whatever. Enjoy your flag!
 
 ## Flag: flag{0.009672680170055}
