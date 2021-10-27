@@ -12,24 +12,25 @@
 
 #### - Find the outer limits of the possible versions by just adding 0's.
 #### - Use a binary search method to keep finding numbers between your limits until you get the newest version.
+#### - Find the flag in the downloaded flag file.
 
 # In-Depth Solution: 
 
-#### So to start off we go to the website on the link provided and a weird file is downloaded. It has a bunch of non-readable text on it, but some is readable. On it though we can find a link that takes us to download version 2. Once we download version 2 we get a link to version 3 and this will repeat. Our goal as the description states is to find the newest one. I start off by playing around with the url and I realize that I can change the url to get whatever version number I put in. I then proceed to find the limits of the version by just adding zeroes. Eventually I get the url:
+#### So to start off we go to the website on the link provided and a weird file is downloaded. It has a bunch of non-readable text on it, but some is readable. On it though we can find a link that takes us to download version 2. Once we download version 2 we download another file and in there we get a link to version 3. This will repeat over and over again. Our goal as the description states is to find the newest one. I start off by playing around with the url and I realize that I can change the url to get whatever version number I put in. I then proceed to find the limits of the version by just adding zeroes. Eventually I get the url:
 
 #### `http://147.182.172.217:42100/v100000000`
 
-#### to work while the url `http://147.182.172.217:42100/v1000000000` would give me the message:
+#### to download a file for me. However, the next url with one more zero: `http://147.182.172.217:42100/v1000000000` would give me the message:
 
 #### `version not found`
 
-#### After that I decided a write a script for me to perform a sort of binary search to find the number that is in between the two limits that I have set. I thought about automating this process so that I would send a web request with my script and based on the response I change my limits. The general idea is that if we do get a version back and it downloads a file, that is the new `min_limit` and if the website responds with 'version not found' we update the `max_limit`. 
+#### After that I decided a write a script for me to perform a sort of binary search to find the number that is in between the two limits that I have set. I thought about automating this process so that I would send a web request with my script and based on the response I change my limits. However of course I was too lazy so I kept inputting the version my program spit out by hand into the url and would change the variables myself accordingly. Pretty much the general idea is that if we do get a version back and it downloads a file, that is the new `min_limit` and if the website responds with 'version not found' we update the `max_limit`. 
 
 ```python
 int(((max_limit - min_limit) / 2) + min_limit)
 ```
 
-#### However of course I was too lazy so I kept inputting the version my program spit out by hand into the url and would change the variables myself accordingly. Anyways eventually the version number `v133791021` was able to give me the flag file. Then just run strings or cat:
+####  That is the script that I use to get the middle number. Anyways eventually the version number `v133791021` was able to give me the flag file. Then just run strings or cat:
 
 #### `strings flag` or `cat flag`
 
