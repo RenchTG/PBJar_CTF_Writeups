@@ -27,7 +27,7 @@
 #### After testing it out it works perfectly and it now means we can use this with all the other functions. But first let's just get the flag. Here's how my final XSS injection turned out:
 
 ```php
-<? <?php ?> flag <?php rereadadfile("flag.php"); ?>
+<? <?php ?> flag <?php rereadadfile("/flag.php"); ?>
 ```
 
 #### And boom, our flag is printed out. I want to put out a quick note though saying that this is not the only way to solve this challenge. Php has a ton of different functions that you can use to do the same thing as I did here. Another common example I found looks something like:
