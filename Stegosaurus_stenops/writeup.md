@@ -18,10 +18,14 @@
 
 #### So when we first open up the image 
 
-## Flag: flag{plz_n0_guess_sum_of_a_b_c_d1vides_n}
+## Flag: flag{ungulatus_better_than_stenops}
 
 # Script: 
 
 ```python
+import os
 
+with open("rockyou.txt", "r") as my_file:
+	for line in my_file:
+		os.system("steghide extract -sf stegosaurus.jpg -xf info.txt -p " + "\"" + line + "\"")
 ```
