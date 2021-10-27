@@ -33,7 +33,7 @@
 #### And boom, our flag is printed out. I want to put out a quick note though saying that this is not the only way to solve this challenge. Php has a ton of different functions that you can use to do the same thing as I did here. Another common example I found looks something like:
 
 ```php
-<? <?php ?> flag system("llss -a /"); system("ccatat /flag.php"); ?>
+<? <?php ?> flag <?php system("llss -a /"); system("ccatat /flag.php"); ?>
 ```
 
 #### This was actually the most common method I saw especially in the original challenge because people had to first even figure out that the flag was being stored in the file flag.php. However a lot of methods did use the php `system()` function so I want to recognize MikeCAT's solution here: https://mikecat.github.io/ctf-writeups/2021/20210917_PBjar_CTF/web/ProgrammersHateProgramming_2/#en because it used a different function of `passthru()` which I think is a lot less common and will be less likely filtered out in similar challenges like this. MikeCAT's solution also has a different method than nesting which concatenates strings together using the php `.` operator and this just goes to show how many different ways you can craft this injection.
