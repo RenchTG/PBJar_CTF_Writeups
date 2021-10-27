@@ -22,7 +22,7 @@
 
 #### Now that we've got all of the one-time filters out of the way we can craft our injection. For the original challenge I used the php `readfile()` function and was able to do it that way, but this time the word read is filtered out so we won't be able to use that function ... just kidding! We can actually get around these stinky filters quite easily and my answer was **nesting**. If you have something like `readfile()` then when 'read' is filtered out that read will turn into a blank space and the 'file()' part on the right side will collapse in and result in just `file()`. That caving in as I like to call it can be exploited however. If we nest a read inside another read, then when the inside read is replaced the two sides of the outer read will collapse in and result in a normal read. Phew, that was long, here's an example.
 
-`rereadad` ####--> `re~~read~~ad` ####--> `read`
+#### `rereadad` ---> `re~~read~~ad` ---> `read`
 
 #### After testing it out it works perfectly and it now means we can use this with all the other functions. But first let's just get the flag. Here's how my final XSS injection turned out:
 
