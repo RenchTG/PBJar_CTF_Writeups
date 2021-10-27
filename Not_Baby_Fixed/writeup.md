@@ -90,7 +90,7 @@ print(flag)
 
 ## Flag: flag{plz_n0_guess_sum_of_a_b_c_d1vides_n}
 
-# Script:
+# Full Script:
 
 ```python
 from Crypto.Util.number import *
