@@ -22,7 +22,7 @@
 
 #### Now that we've got all of the one-time filters out of the way we can craft our injection. For the original challenge I used the php `readfile()` function and was able to do it that way, but this time the word read is filtered out so we won't be able to use that function ... just kidding! We can actually get around these stinky filters quite easily and my answer was **nesting**. If you have something like `readfile()` then when 'read' is filtered out that read will turn into a blank space and the 'file()' part on the right side will collapse in and result in just `file()`. That caving in as I like to call it can be exploited however. If we nest a read inside another read, then when the inside read is replaced the two sides of the outer read will collapse in and result in a normal read. Phew, that was long, here's an example.
 
-#### `rereadad` ---> `re~~read~~ad` ---> `read`
+#### `rereadad` ---> `re` ~~read~~ `ad` ---> `read`
 
 #### After testing it out it works perfectly and it now means we can use this with all the other functions. But first let's just get the flag. Here's how my final XSS injection turned out:
 
@@ -36,7 +36,7 @@
 <? <?php ?> flag system("llss -a /"); system("ccatat /flag.php"); ?>
 ```
 
-#### This was actually the most common method I saw especially in the original challenge because people had to first even figure out that the flag was being stored in the file flag.php. However a lot of methods did use the php `system()` function so I want to recognize MikeCAT's solution here: https://mikecat.github.io/ctf-writeups/2021/20210917_PBjar_CTF/web/ProgrammersHateProgramming_2/#en because it used a different function of `passthru()` which I think is a lot less common and will be less likely filtered out in challenges like this. MikeCAT's solution also has a different method than nesting which just concatenates strings which just goes to show how many different ways you can craft this injection.
+#### This was actually the most common method I saw especially in the original challenge because people had to first even figure out that the flag was being stored in the file flag.php. However a lot of methods did use the php `system()` function so I want to recognize MikeCAT's solution here: https://mikecat.github.io/ctf-writeups/2021/20210917_PBjar_CTF/web/ProgrammersHateProgramming_2/#en because it used a different function of `passthru()` which I think is a lot less common and will be less likely filtered out in similar challenges like this. MikeCAT's solution also has a different method than nesting which concatenates strings together using the php `.` operator and this just goes to show how many different ways you can craft this injection.
 
 #### Anyways enough blabbering here's the flag!
 
