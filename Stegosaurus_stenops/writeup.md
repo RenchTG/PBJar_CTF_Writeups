@@ -33,7 +33,7 @@ with open("rockyou.txt", "r") as my_file:
 os.system("steghide extract -sf stegosaurus.jpg -xf info.txt -p " + "\"" + line + "\"")
 ```
 
-#### After searching I found this neat module by the name of os, that I'm pretty sure is built into python so no installing is necessary, which allows you to run terminal commands from python. Eventually I was able to craft together that line shown above which will try to extract info from the image, put anything extracted into info.txt, and use the passphrase taken as we loop through rockyou.txt. The weird "\\" on both sides of the variable `line` are just to make sure that if there are any spaces in one of the lines, such as 'I love you', the command will read it in as one string rather than spitting out something like: 
+#### After searching I found this neat module by the name of os, that I'm pretty sure is built into python so no installing is necessary, which allows you to run terminal commands from python. Eventually I was able to craft together that line shown above which will try to extract info from the image, put anything extracted into info.txt, and use the passphrase taken as we loop through rockyou.txt. The weird "\\"" on both sides of the variable `line` are just to make sure that if there are any spaces in one of the lines, such as 'I love you', the command will read it in as one string rather than spitting out something like: 
 
 `Unknown argument "you"`
 
