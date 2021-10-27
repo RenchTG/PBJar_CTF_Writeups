@@ -27,13 +27,34 @@
 #### After that I decided a write a script for me to perform a sort of binary search to find the number that is in between the two limits that I have set. I thought about automating this process so that I would send a web request with my script and based on the response I change my limits. However of course I was too lazy so I kept inputting the version my program spit out by hand into the url and would change the variables myself accordingly. Pretty much the general idea is that if we do get a version back and it downloads a file, that is the new `min_limit` and if the website responds with 'version not found' we update the `max_limit`. 
 
 ```python
-int(((max_limit - min_limit) / 2) + min_limit)
+min_limit = 100000000
+max_limit = 1000000000
+halfway = int(((max_limit - min_limit) / 2) + min_limit)
+print(halfway)
 ```
 
-####  That is the script that I use to get the middle number. Anyways eventually the version number `v133791021` was able to give me the flag file. Then just run strings or cat:
+####  This is the short script that I use to get my middle number. After that I just run it several times replacing the url with the number my program prints and then update min and max limit accordingly. Eventually the version number `133791021` was able to give me the flag file. Then just run strings or cat:
 
 #### `strings flag` or `cat flag`
 
-#### And boom, there's our flag.
+#### And boom, our flag is in there. There's definitely a much more optimized way to do this especially if you can automate updating the max and min limits, but this method works and got me the flag which is what matters. Anyways here's the flag, enjoy!
 
 ## Flag: flag{h0w_l0ng_wher3_y0u_g0ne_f0r_3910512832}
+
+# Full Script:
+
+```python
+#initial limits
+min_limit = 100000000
+max_limit = 1000000000
+
+#final limits
+min_limit = 133791015
+max_limit = 133791027
+
+halfway = int(((max_limit - min_limit) / 2) + min_limit)
+
+print("Version can be: " + str(min_limit))
+print("Version can't be: " + str(max_limit))
+print("In the middle: " + str(halfway))
+```
