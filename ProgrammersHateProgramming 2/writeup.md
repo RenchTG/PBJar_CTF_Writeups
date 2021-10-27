@@ -10,7 +10,7 @@
 
 # TLDR:
 
-#### - Use same methodology as the original ProgrammersHateProgramming challenge, but bypass more "one-time" filters and nest "permanent" filtered out words.
+#### - Use same methodology as the original ProgrammersHateProgramming challenge, but bypass more "one-time" filters and use nesting or concatenation on "permanent" filtered out words.
 
 # In-Depth Solution: 
 
