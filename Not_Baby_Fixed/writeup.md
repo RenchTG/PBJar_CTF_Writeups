@@ -22,19 +22,19 @@
 
 `n = a^3 + b^3 - 34c^3` 
 
-and we know all the values of a b and c from nums.txt. *Btw the reason this challenge had to be "fixed" is that the original Not_Baby accidentally didn't provide nums.txt so it was "supposedly" impossible but people just ran factor calculators for 2 hours to solve it.* Anyways, knowing a, b, and c we can try to break up this equation/polynomial or whatever you want to call it to make factoring n more feasible. So we can use any big factorization calculator like alpertron or factorDB to start factoring a, b, and c (I used factorDB). Eventually you'll find that a and c have a large, prime common factor and that b and c also have a large, prime common factor. We can then rewrite a, b, and c using these two large factors we found, lets call them x and y. 
+#### and we know all the values of a b and c from nums.txt. *Btw the reason this challenge had to be "fixed" is that the original Not_Baby accidentally didn't provide nums.txt so it was "supposedly" impossible but people just ran factor calculators for 2 hours to solve it.* Anyways, knowing a, b, and c we can try to break up this equation/polynomial or whatever you want to call it to make factoring n more feasible. So we can use any big factorization calculator like alpertron or factorDB to start factoring a, b, and c (I used factorDB). Eventually you'll find that a and c have a large, prime common factor and that b and c also have a large, prime common factor. We can then rewrite a, b, and c using these two large factors we found, lets call them x and y. 
 
 `a = 15x^2, b = 7y^2, c = 3xy where x = 321329349024937022728435772726127082487 and y = 302518462040600437690188095770599287567`
 
-Knowing that n = a^3 + b^3 - 34c^3, we can know plug-in the values we have calculated and make a new two-variable equation which looks like this: 
+#### Knowing that n = a^3 + b^3 - 34c^3, we can know plug-in the values we have calculated and make a new two-variable equation which looks like this: 
 
 `3375x^6 + 343y^6 - 918x^3y^3`
 
-Now we have a two-vairable equation/polynomial so we can try to factor it out now. You can use something like sage for this but I was lazy and found this website that factored it for me: https://quickmath.com/webMathematica3/quickmath/algebra/factor/basic.jsp. The two resulting factors we get are: 
+#### Now we have a two-vairable equation/polynomial so we can try to factor it out now. You can use something like sage for this but I was lazy and found this website that factored it for me: https://quickmath.com/webMathematica3/quickmath/algebra/factor/basic.jsp. The two resulting factors we get are: 
 
 `(15x^2 + 3xy + 7y^2)(225x^4 - 45x^3y - 96x^2y^2 - 21xy^3 + 49y^4)`
 
-Now we have successfully split n into two smaller factors, yay. Rather than mutliplying out those polynomials by hand we can write a script to do it for us.
+#### Now we have successfully split n into two smaller factors, yay. Rather than mutliplying out those polynomials by hand we can write a script to do it for us.
 
 ```python
 x = 321329349024937022728435772726127082487
